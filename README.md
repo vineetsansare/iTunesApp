@@ -57,7 +57,6 @@ To be attached.
 ![Simulator Screen Shot - iPhone 11 Pro Max - 2021-12-19 at 02 18 41](https://user-images.githubusercontent.com/6418402/146657805-8f377e54-51e5-40f2-9a3d-347c23fee19a.png)
 
 
-## App Architecture
 
 
 
