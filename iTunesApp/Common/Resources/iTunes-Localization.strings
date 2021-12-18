@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  iTunesApp
+
+  Created by Vineet Sansare on 16/12/2021.
+  
+*/
+
+//MARK: SearchCriteria screen
+"EmptySearchErrorMessage" = "Please enter search term.";
+
+//MARK: MediaTypeSelector screen
+
+//MARK: SearchResults screen
+"title_result" = "Search Result";
+"grid" = "Grid";
+"list" = "List";
