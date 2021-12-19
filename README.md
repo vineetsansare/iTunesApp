@@ -15,7 +15,7 @@ You can also play a video, book, podcast, song.
 - [x] Designed Search Results screen
 - [x] Designed Media Details screen
 - [x] Followed VIP architecture
-- [ ] Unit tests using Quick, Nimble (Need to write)
+- [ ] Unit tests using Quick, Nimble (Work In Progress)
 - [x] Clear README.md that explains how the code and the test can be run
 
 ## Running the app
@@ -36,8 +36,6 @@ Once you have clonned the app to your local system, you can fire-up the app by o
 
 ### Screenshots
 
-To be attached.
-
 ![Simulator Screen Shot - iPhone 11 Pro Max - 2021-12-19 at 02 17 23](https://user-images.githubusercontent.com/6418402/146657788-d09168d0-6c46-49ff-9546-27d1a60127f2.png)
 
 ![Simulator Screen Shot - iPhone 11 Pro Max - 2021-12-19 at 02 17 26](https://user-images.githubusercontent.com/6418402/146657792-701b4785-ef2f-41a3-aa0e-c191f67d37d5.png)
@@ -56,9 +54,10 @@ To be attached.
 
 ![Simulator Screen Shot - iPhone 11 Pro Max - 2021-12-19 at 02 18 41](https://user-images.githubusercontent.com/6418402/146657805-8f377e54-51e5-40f2-9a3d-347c23fee19a.png)
 
+![Simulator Screen Shot - iPhone 11 Pro Max - 2021-12-19 at 12 47 39](https://user-images.githubusercontent.com/6418402/146669059-41629fb2-873d-42de-bb8b-968349ecfd6e.png)
 
 
+### Known issues
 
-
-
-
+- [x] Unable to pop from MediatTypeSelector (Child) screen to SearchCriteria (Parent) screen. - I've followed the original clean-swift blog website and his sample app to navigate from Child to Parent but for some reason I am getting presentingViewController in routeToSearchCriteria()  method of MediaTypeSelectorRouter as nil. thus its not poping. Therefore I have to send the entities in the iTunesSearch API hardcoded.
+- [ ] UTs are not covered as I was completing the app's functionality and was stuck at some point and needed time to figure it out. This is because it's the first time I'm having hands on experience on the VIP architecture. Once I use it on day to day basis then I can assure you the pace will increase.
