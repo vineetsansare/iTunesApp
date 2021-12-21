@@ -22,6 +22,9 @@ You can also play a video, book, podcast, song.
 
 Once you have clonned the app to your local system, you can fire-up the app by opening _iTunesApp.xcworkspace_ file.
 
+Please note that I've puashed the pods as well. So you don't need to run **pod install**
+
+
 ## Important Info 
 > _To demonstrate that I also have knowledge on using Cocoapods, I'm using few 3rd party pods like 
 
@@ -39,6 +42,8 @@ Once you have clonned the app to your local system, you can fire-up the app by o
 ![Simulator Screen Shot - iPhone 11 Pro Max - 2021-12-19 at 02 17 23](https://user-images.githubusercontent.com/6418402/146657788-d09168d0-6c46-49ff-9546-27d1a60127f2.png)
 
 ![Simulator Screen Shot - iPhone 11 Pro Max - 2021-12-19 at 02 17 26](https://user-images.githubusercontent.com/6418402/146657792-701b4785-ef2f-41a3-aa0e-c191f67d37d5.png)
+
+![Simulator Screen Shot - iPhone 11 Pro Max - 2021-12-21 at 18 47 49](https://user-images.githubusercontent.com/6418402/146949301-d56b0b8a-ef99-4893-9d31-b4ca0cbe0312.png)
 
 ![Simulator Screen Shot - iPhone 11 Pro Max - 2021-12-19 at 02 17 29](https://user-images.githubusercontent.com/6418402/146657793-b63a806d-7ab0-45a7-b7d7-42488149aae1.png)
 
@@ -59,5 +64,8 @@ Once you have clonned the app to your local system, you can fire-up the app by o
 
 ### Known issues
 
-- [x] Unable to pop from MediatTypeSelector (Child) screen to SearchCriteria (Parent) screen. - I've followed the original clean-swift blog website and his sample app to navigate from Child to Parent but for some reason I am getting presentingViewController in routeToSearchCriteria()  method of MediaTypeSelectorRouter as nil. thus its not poping. Therefore I have to send the entities in the iTunesSearch API hardcoded.
+- [x] ~~Unable to pop from MediatTypeSelector (Child) screen to SearchCriteria (Parent) screen. - I've followed the original clean-swift blog website and his sample app to navigate from Child to Parent but for some reason I am getting presentingViewController in routeToSearchCriteria()  method of MediaTypeSelectorRouter as nil. thus its not poping. Therefore I have to send the entities in the iTunesSearch API hardcoded.~~
 - [ ] UTs are not covered as I was completing the app's functionality and was stuck at some point and needed time to figure it out. This is because it's the first time I'm having hands on experience on the VIP architecture. Once I use it on day to day basis then I can assure you the pace will increase.
+
+### Updates
+- [x] Fixed the issue of navigating from MediaTypeSelector (Child) to SearchCriteria (Parent) screen.
