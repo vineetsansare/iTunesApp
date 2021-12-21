@@ -365,6 +365,7 @@
 		4429174F2769D768002D9575 /* iTunesAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				447E89612771D0F5008C5826 /* Scene */,
 				442917502769D768002D9575 /* iTunesAppTests.swift */,
 				442917522769D768002D9575 /* Info.plist */,
 			);
@@ -413,6 +414,21 @@
 				4409B6AE276C6544006ED15C /* SearchCriteriaModels.swift */,
 				4409B6AF276C6544006ED15C /* SearchCriteriaViewController.swift */,
 				4409B6B0276C6544006ED15C /* SearchCriteriaInteractor.swift */,
+			);
+			path = SearchCriteria;
+			sourceTree = "<group>";
+		};
+		447E89612771D0F5008C5826 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				447E89622771D100008C5826 /* SearchCriteria */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		447E89622771D100008C5826 /* SearchCriteria */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = SearchCriteria;
 			sourceTree = "<group>";

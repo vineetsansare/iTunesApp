@@ -85,6 +85,7 @@ class SearchCriteriaInteractor: SearchCriteriaBusinessLogic, SearchCriteriaDataS
     }
     
     func informMediaTypeSelector(request: SearchCriteria.Entity.Request) {
+        mediaTypes = request.entities ?? []
         presenter?.presentMediaTypeSelector(response: SearchCriteria.SelectedEntity.Response(types: mediaTypes))
     }
 }
