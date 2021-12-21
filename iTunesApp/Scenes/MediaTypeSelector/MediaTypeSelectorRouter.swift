@@ -13,51 +13,37 @@
 import UIKit
 
 @objc protocol MediaTypeSelectorRoutingLogic {
-    func routeToSearchCriteria()
+    func routeToSearchCriteria(userSelectedMediaTypes: [String])
 }
 
 protocol MediaTypeSelectorDataPassing {
-  var dataStore: MediaTypeSelectorDataStore? { get set }
+    var dataStore: MediaTypeSelectorDataStore? { get set }
 }
 
 class MediaTypeSelectorRouter: NSObject, MediaTypeSelectorRoutingLogic, MediaTypeSelectorDataPassing {
-
-  weak var viewController: MediaTypeSelectorViewController?
-  var dataStore: MediaTypeSelectorDataStore?
-  
-  // MARK: Routing
-  
-  //func routeToSomewhere(segue: UIStoryboardSegue?)
-  //{
-  //  if let segue = segue {
-  //    let destinationVC = segue.destination as! SomewhereViewController
-  //    var destinationDS = destinationVC.router!.dataStore!
-  //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-  //  } else {
-  //    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-  //    let destinationVC = storyboard.instantiateViewController(withIdentifier: "SomewhereViewController") as! SomewhereViewController
-  //    var destinationDS = destinationVC.router!.dataStore!
-  //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-  //    navigateToSomewhere(source: viewController!, destination: destinationVC)
-  //  }
-  //}
-
-    func routeToSearchCriteria() {
+    
+    weak var viewController: MediaTypeSelectorViewController?
+    var dataStore: MediaTypeSelectorDataStore?
+    
+    // MARK: Routing
+    
+    func routeToSearchCriteria(userSelectedMediaTypes: [String]) {
         guard let source = viewController,
-              let destination = viewController?.presentingViewController as? SearchCriteriaViewController else {
+              let destination = (viewController?.parent as! UINavigationController).viewControllers[0] as? SearchCriteriaViewController else {
             return
         }
         var destinationDS = destination.router!.dataStore!
         passDataToSearchCriteria(source: dataStore!, destination: &destinationDS)
         navigateToSearchCriteriaScreen(source: source, destination: destination)
     }
-  // MARK: Navigation
-  func navigateToSearchCriteriaScreen(source: MediaTypeSelectorViewController, destination: SearchCriteriaViewController) {
-    source.dismiss(animated: true, completion: nil)
-  }
-  
-  // MARK: Passing data  
-  func passDataToSearchCriteria(source: MediaTypeSelectorDataStore, destination: inout SearchCriteriaDataStore) {
-    destination.mediaTypes = source.mediaTypes
-  }
+    
+    // MARK: Navigation
+    func navigateToSearchCriteriaScreen(source: MediaTypeSelectorViewController, destination: SearchCriteriaViewController) {
+        source.navigationController?.popToViewController(destination, animated: true)
+    }
+    
+    // MARK: Passing data
+    func passDataToSearchCriteria(source: MediaTypeSelectorDataStore, destination: inout SearchCriteriaDataStore) {
+        destination.mediaTypes = source.mediaTypes
+    }
 }

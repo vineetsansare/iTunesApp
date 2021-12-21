@@ -13,7 +13,9 @@
 import UIKit
 
 protocol MediaTypeSelectorBusinessLogic {
-    func doSomething(request: MediaTypeSelector.MediaType.Request)
+    func updateWithSelectedMedia(request: MediaTypeSelector.MediaType.Request)
+    
+    func displaySearchCriteria(request: MediaTypeSelector.MediaType.Request)
 }
 
 protocol MediaTypeSelectorDataStore {
@@ -28,8 +30,15 @@ class MediaTypeSelectorInteractor: MediaTypeSelectorBusinessLogic, MediaTypeSele
     
     // MARK: Do something
     
-    func doSomething(request: MediaTypeSelector.MediaType.Request) {
+    func updateWithSelectedMedia(request: MediaTypeSelector.MediaType.Request) {
         let response = MediaTypeSelector.MediaType.Response(mediaTypes: request.mediaTypes)
-        presenter?.presentTellSearchCriteria(response: response)
+        mediaTypes = request.mediaTypes
+        presenter?.presentUpdatedMediaTypes(response: response)
+    }
+    
+    func displaySearchCriteria(request: MediaTypeSelector.MediaType.Request) {
+        let response = MediaTypeSelector.MediaType.Response(mediaTypes: request.mediaTypes)
+        mediaTypes = request.mediaTypes
+        presenter?.presentSearchCriteria(response: response)
     }
 }

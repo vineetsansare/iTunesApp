@@ -22,7 +22,9 @@ protocol SearchCriteriaDisplayLogic: AnyObject {
 class SearchCriteriaViewController: BaseViewController {
     var interactor: SearchCriteriaBusinessLogic?
     var router: (NSObjectProtocol & SearchCriteriaRoutingLogic & SearchCriteriaDataPassing)?
-    var entities = ["Album","Artist","Book","Movie","Music Video","Podcast","Song"]
+    var entities: [String] {
+        router?.dataStore?.mediaTypes ?? []
+    }
     
     @IBOutlet private (set) weak var searcTermTextField: UITextField?
     @IBOutlet private (set) weak var submitButton: UIButton?
@@ -52,7 +54,7 @@ class SearchCriteriaViewController: BaseViewController {
         router.viewController = viewController
         router.dataStore = interactor
     }
-
+    
     //MARK: View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,6 +66,11 @@ class SearchCriteriaViewController: BaseViewController {
         submitButton?.layer.cornerRadius = 22
         mediaTypeView?.layer.cornerRadius = 10
         searcTermTextField?.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("\n\n Selected media types - \(entities) \n\n")
     }
 }
 
@@ -77,7 +84,6 @@ extension SearchCriteriaViewController {
     }
     
     @IBAction func mediaTypeViewTapped(_ gesture: UITapGestureRecognizer) {        
-//        router?.routeToMediaTypeSelector()
         interactor?.informMediaTypeSelector(request: SearchCriteria.Entity.Request(term: searcTermTextField?.text,
                                                                                    entities: entities))
     }
@@ -93,7 +99,7 @@ extension SearchCriteriaViewController: SearchCriteriaDisplayLogic {
         hideLoader()
         router?.routeToSearchResults()
     }
-
+    
     func showError(message: String) {
         hideLoader()
         showAlert(message: message)

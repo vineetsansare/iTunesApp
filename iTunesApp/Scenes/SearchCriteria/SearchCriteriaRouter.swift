@@ -52,6 +52,7 @@ class SearchCriteriaRouter: NSObject, SearchCriteriaRoutingLogic, SearchCriteria
     // MARK: Navigation
     func navigateToMediaTypeSelector(source: SearchCriteriaViewController, destination: MediaTypeSelectorViewController) {
         source.show(destination, sender: nil)
+//        source.navigationController?.pushViewController(destination, animated: true)
     }
     
     func navigateToSearchResults(source: SearchCriteriaViewController, destination: SearchResultsViewController) {

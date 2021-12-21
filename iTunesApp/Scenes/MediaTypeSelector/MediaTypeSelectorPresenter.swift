@@ -13,15 +13,21 @@
 import UIKit
 
 protocol MediaTypeSelectorPresentationLogic {
-    func presentTellSearchCriteria(response: MediaTypeSelector.MediaType.Response)
+    func presentSearchCriteria(response: MediaTypeSelector.MediaType.Response)
+    func presentUpdatedMediaTypes(response: MediaTypeSelector.MediaType.Response)
 }
 
 class MediaTypeSelectorPresenter: MediaTypeSelectorPresentationLogic {
     weak var viewController: MediaTypeSelectorDisplayLogic?
     
     // MARK: Do something
-    func presentTellSearchCriteria(response: MediaTypeSelector.MediaType.Response) {
+    func presentSearchCriteria(response: MediaTypeSelector.MediaType.Response) {
         let viewModel = MediaTypeSelector.MediaType.ViewModel(mediaTypes: response.mediaTypes)
-        viewController?.displaySomething(viewModel: viewModel)
+        viewController?.updateUserSelectedMediaTypes(viewModel: viewModel)
+    }
+    
+    func presentUpdatedMediaTypes(response: MediaTypeSelector.MediaType.Response) {
+        let viewModel = MediaTypeSelector.MediaType.ViewModel(mediaTypes: response.mediaTypes)
+        viewController?.displaySelectedMediaTypes(viewModel: viewModel)
     }
 }

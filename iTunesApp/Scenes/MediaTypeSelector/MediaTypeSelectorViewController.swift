@@ -13,7 +13,8 @@
 import UIKit
 
 protocol MediaTypeSelectorDisplayLogic: AnyObject {
-    func displaySomething(viewModel: MediaTypeSelector.MediaType.ViewModel)
+    func displaySelectedMediaTypes(viewModel: MediaTypeSelector.MediaType.ViewModel)
+    func updateUserSelectedMediaTypes(viewModel: MediaTypeSelector.MediaType.ViewModel)
 }
 
 class MediaTypeSelectorViewController: BaseViewController, MediaTypeSelectorDisplayLogic {
@@ -21,7 +22,7 @@ class MediaTypeSelectorViewController: BaseViewController, MediaTypeSelectorDisp
     var router: (NSObjectProtocol & MediaTypeSelectorRoutingLogic & MediaTypeSelectorDataPassing)?
         
     private var allMediaTypes: [String] = ["Album","Artist","Book","Movie","Music Video","Podcast","Song"]
-    private var selectedMediaTypes: [String] = ["Album","Artist","Book","Movie","Music Video","Podcast","Song"]
+    private var selectedMediaTypes: [String] = []
     @IBOutlet private (set) weak var mediaTypeSelectorTableView: UITableView?
     @IBOutlet private (set) weak var doneBarButton: UIBarButtonItem?
     
@@ -69,13 +70,19 @@ class MediaTypeSelectorViewController: BaseViewController, MediaTypeSelectorDisp
     
     // MARK: Do something
     func informInteractor() {
-        let request = MediaTypeSelector.MediaType.Request(mediaTypes: selectedMediaTypes)
-        interactor?.doSomething(request: request)
+        let request = MediaTypeSelector.MediaType.Request(mediaTypes: router?.dataStore?.mediaTypes ?? [])
+        interactor?.updateWithSelectedMedia(request: request)
     }
     
-    func displaySomething(viewModel: MediaTypeSelector.MediaType.ViewModel) {
+    func displaySelectedMediaTypes(viewModel: MediaTypeSelector.MediaType.ViewModel) {
         print("viewModel - \(viewModel.mediaTypes)")
-        router?.routeToSearchCriteria()
+        selectedMediaTypes.removeAll()
+        selectedMediaTypes = viewModel.mediaTypes
+        mediaTypeSelectorTableView?.reloadData()
+    }
+    
+    func updateUserSelectedMediaTypes(viewModel: MediaTypeSelector.MediaType.ViewModel) {
+        router?.routeToSearchCriteria(userSelectedMediaTypes: viewModel.mediaTypes)
     }
     
     /// Configure UI
@@ -84,7 +91,7 @@ class MediaTypeSelectorViewController: BaseViewController, MediaTypeSelectorDisp
     }
     
     @IBAction func doneBarButtonTapped(_ sender: UIBarButtonItem) {
-        router?.routeToSearchCriteria()
+        interactor?.displaySearchCriteria(request: MediaTypeSelector.MediaType.Request(mediaTypes: selectedMediaTypes))
     }
 }
 
@@ -105,12 +112,20 @@ extension MediaTypeSelectorViewController: UITableViewDataSource, UITableViewDel
         let mediaType = allMediaTypes[indexPath.row]
         cell.textLabel?.text = mediaType
         cell.textLabel?.textColor = .white
+        cell.accessoryType = selectedMediaTypes.contains(allMediaTypes[indexPath.row]) ? .checkmark : .none
         return cell
     }
     
     //MARK: TableView DataSource Methods
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedMediaType = allMediaTypes[indexPath.row]
-        router?.dataStore?.mediaTypes.append(selectedMediaType)
+        
+        router?.dataStore?.mediaTypes.append(selectedMediaType) //TODO: Should append unique values only
+        selectedMediaTypes.append(selectedMediaType)
     }
+    
+//    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+//        router?.dataStore?.mediaTypes.remove(at: indexPath.row)
+//        selectedMediaTypes.remove(at: indexPath.row)
+//    }
 }
