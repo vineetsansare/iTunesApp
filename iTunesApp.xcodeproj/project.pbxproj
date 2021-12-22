@@ -67,6 +67,18 @@
 		44CF871E277339A600D1FEC5 /* NetworkMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CF871D277339A600D1FEC5 /* NetworkMock.swift */; };
 		44CF871F2773421200D1FEC5 /* NetworkMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CF871D277339A600D1FEC5 /* NetworkMock.swift */; };
 		44CF872027735E1100D1FEC5 /* itunesSearchResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 44CF8717277315B200D1FEC5 /* itunesSearchResponse.json */; };
+		44CF87262773684600D1FEC5 /* SearchResultsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CF87222773684600D1FEC5 /* SearchResultsViewControllerTests.swift */; };
+		44CF87272773684600D1FEC5 /* SearchResultsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CF87232773684600D1FEC5 /* SearchResultsInteractorTests.swift */; };
+		44CF87282773684600D1FEC5 /* SearchResultsWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CF87242773684600D1FEC5 /* SearchResultsWorkerTests.swift */; };
+		44CF87292773684600D1FEC5 /* SearchResultsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CF87252773684600D1FEC5 /* SearchResultsPresenterTests.swift */; };
+		44CF872F277374BE00D1FEC5 /* MediaTypeSelectorViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CF872B277374BE00D1FEC5 /* MediaTypeSelectorViewControllerTests.swift */; };
+		44CF8730277374BE00D1FEC5 /* MediaTypeSelectorInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CF872C277374BE00D1FEC5 /* MediaTypeSelectorInteractorTests.swift */; };
+		44CF8731277374BE00D1FEC5 /* MediaTypeSelectorWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CF872D277374BE00D1FEC5 /* MediaTypeSelectorWorkerTests.swift */; };
+		44CF8732277374BE00D1FEC5 /* MediaTypeSelectorPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CF872E277374BE00D1FEC5 /* MediaTypeSelectorPresenterTests.swift */; };
+		44CF87382773D0FD00D1FEC5 /* MediaDetailsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CF87342773D0FD00D1FEC5 /* MediaDetailsViewControllerTests.swift */; };
+		44CF87392773D0FD00D1FEC5 /* MediaDetailsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CF87352773D0FD00D1FEC5 /* MediaDetailsInteractorTests.swift */; };
+		44CF873A2773D0FD00D1FEC5 /* MediaDetailsWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CF87362773D0FD00D1FEC5 /* MediaDetailsWorkerTests.swift */; };
+		44CF873B2773D0FD00D1FEC5 /* MediaDetailsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CF87372773D0FD00D1FEC5 /* MediaDetailsPresenterTests.swift */; };
 		9F0EC7BD34029FA974D7FA59 /* Pods_iTunesApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31E4A70A73C082286C67FBF1 /* Pods_iTunesApp.framework */; };
 		D4EB3D751FFD9F408B676864 /* Pods_iTunesAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63F7A3F19ADA0D1BD01272B2 /* Pods_iTunesAppTests.framework */; };
 /* End PBXBuildFile section */
@@ -156,6 +168,18 @@
 		44CF8714277312D200D1FEC5 /* JSONHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONHelper.swift; sourceTree = "<group>"; };
 		44CF8717277315B200D1FEC5 /* itunesSearchResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = itunesSearchResponse.json; sourceTree = "<group>"; };
 		44CF871D277339A600D1FEC5 /* NetworkMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMock.swift; sourceTree = "<group>"; };
+		44CF87222773684600D1FEC5 /* SearchResultsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewControllerTests.swift; sourceTree = "<group>"; };
+		44CF87232773684600D1FEC5 /* SearchResultsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsInteractorTests.swift; sourceTree = "<group>"; };
+		44CF87242773684600D1FEC5 /* SearchResultsWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsWorkerTests.swift; sourceTree = "<group>"; };
+		44CF87252773684600D1FEC5 /* SearchResultsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsPresenterTests.swift; sourceTree = "<group>"; };
+		44CF872B277374BE00D1FEC5 /* MediaTypeSelectorViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaTypeSelectorViewControllerTests.swift; sourceTree = "<group>"; };
+		44CF872C277374BE00D1FEC5 /* MediaTypeSelectorInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaTypeSelectorInteractorTests.swift; sourceTree = "<group>"; };
+		44CF872D277374BE00D1FEC5 /* MediaTypeSelectorWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaTypeSelectorWorkerTests.swift; sourceTree = "<group>"; };
+		44CF872E277374BE00D1FEC5 /* MediaTypeSelectorPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaTypeSelectorPresenterTests.swift; sourceTree = "<group>"; };
+		44CF87342773D0FD00D1FEC5 /* MediaDetailsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDetailsViewControllerTests.swift; sourceTree = "<group>"; };
+		44CF87352773D0FD00D1FEC5 /* MediaDetailsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDetailsInteractorTests.swift; sourceTree = "<group>"; };
+		44CF87362773D0FD00D1FEC5 /* MediaDetailsWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDetailsWorkerTests.swift; sourceTree = "<group>"; };
+		44CF87372773D0FD00D1FEC5 /* MediaDetailsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDetailsPresenterTests.swift; sourceTree = "<group>"; };
 		4EE1CEC223F4F168E23491E0 /* Pods-iTunesApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesApp.release.xcconfig"; path = "Target Support Files/Pods-iTunesApp/Pods-iTunesApp.release.xcconfig"; sourceTree = "<group>"; };
 		606484643CD56DFA31896216 /* Pods_iTunesApp_iTunesAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTunesApp_iTunesAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63F7A3F19ADA0D1BD01272B2 /* Pods_iTunesAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTunesAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -446,6 +470,9 @@
 		447E89612771D0F5008C5826 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				44CF87332773D0EA00D1FEC5 /* MediaDetails */,
+				44CF872A2773749900D1FEC5 /* MediaTypeSelector */,
+				44CF87212773682000D1FEC5 /* SearchResults */,
 				44CF86FF277266C100D1FEC5 /* SearchCriteria */,
 			);
 			path = Scene;
@@ -516,6 +543,39 @@
 				44CF871D277339A600D1FEC5 /* NetworkMock.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		44CF87212773682000D1FEC5 /* SearchResults */ = {
+			isa = PBXGroup;
+			children = (
+				44CF87222773684600D1FEC5 /* SearchResultsViewControllerTests.swift */,
+				44CF87232773684600D1FEC5 /* SearchResultsInteractorTests.swift */,
+				44CF87242773684600D1FEC5 /* SearchResultsWorkerTests.swift */,
+				44CF87252773684600D1FEC5 /* SearchResultsPresenterTests.swift */,
+			);
+			path = SearchResults;
+			sourceTree = "<group>";
+		};
+		44CF872A2773749900D1FEC5 /* MediaTypeSelector */ = {
+			isa = PBXGroup;
+			children = (
+				44CF872B277374BE00D1FEC5 /* MediaTypeSelectorViewControllerTests.swift */,
+				44CF872C277374BE00D1FEC5 /* MediaTypeSelectorInteractorTests.swift */,
+				44CF872D277374BE00D1FEC5 /* MediaTypeSelectorWorkerTests.swift */,
+				44CF872E277374BE00D1FEC5 /* MediaTypeSelectorPresenterTests.swift */,
+			);
+			path = MediaTypeSelector;
+			sourceTree = "<group>";
+		};
+		44CF87332773D0EA00D1FEC5 /* MediaDetails */ = {
+			isa = PBXGroup;
+			children = (
+				44CF87342773D0FD00D1FEC5 /* MediaDetailsViewControllerTests.swift */,
+				44CF87352773D0FD00D1FEC5 /* MediaDetailsInteractorTests.swift */,
+				44CF87362773D0FD00D1FEC5 /* MediaDetailsWorkerTests.swift */,
+				44CF87372773D0FD00D1FEC5 /* MediaDetailsPresenterTests.swift */,
+			);
+			path = MediaDetails;
 			sourceTree = "<group>";
 		};
 		8DBBFC7C54550E42D5B6B1AD /* Pods */ = {
@@ -850,15 +910,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44CF87382773D0FD00D1FEC5 /* MediaDetailsViewControllerTests.swift in Sources */,
 				44CF87082772673F00D1FEC5 /* SearchCriteriaWorkerTests.swift in Sources */,
+				44CF8731277374BE00D1FEC5 /* MediaTypeSelectorWorkerTests.swift in Sources */,
+				44CF873A2773D0FD00D1FEC5 /* MediaDetailsWorkerTests.swift in Sources */,
 				442917512769D768002D9575 /* iTunesAppTests.swift in Sources */,
+				44CF87292773684600D1FEC5 /* SearchResultsPresenterTests.swift in Sources */,
+				44CF87282773684600D1FEC5 /* SearchResultsWorkerTests.swift in Sources */,
 				44CF870D27727C2F00D1FEC5 /* JSONMockingTool.swift in Sources */,
 				44CF8715277312D200D1FEC5 /* JSONHelper.swift in Sources */,
 				44CF87062772673F00D1FEC5 /* SearchCriteriaViewControllerTests.swift in Sources */,
 				44CF871E277339A600D1FEC5 /* NetworkMock.swift in Sources */,
+				44CF8732277374BE00D1FEC5 /* MediaTypeSelectorPresenterTests.swift in Sources */,
 				44CF87092772673F00D1FEC5 /* SearchCriteriaPresenterTests.swift in Sources */,
 				44CF871B2773227D00D1FEC5 /* SearchCriteriaStubs.swift in Sources */,
 				44CF87072772673F00D1FEC5 /* SearchCriteriaInteractorTests.swift in Sources */,
+				44CF8730277374BE00D1FEC5 /* MediaTypeSelectorInteractorTests.swift in Sources */,
+				44CF873B2773D0FD00D1FEC5 /* MediaDetailsPresenterTests.swift in Sources */,
+				44CF87272773684600D1FEC5 /* SearchResultsInteractorTests.swift in Sources */,
+				44CF872F277374BE00D1FEC5 /* MediaTypeSelectorViewControllerTests.swift in Sources */,
+				44CF87262773684600D1FEC5 /* SearchResultsViewControllerTests.swift in Sources */,
+				44CF87392773D0FD00D1FEC5 /* MediaDetailsInteractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

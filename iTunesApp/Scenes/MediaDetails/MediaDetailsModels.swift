@@ -14,18 +14,27 @@ import UIKit
 
 enum MediaDetails
 {
-  // MARK: Use cases
-  
-  enum Something
-  {
-    struct Request
+    // MARK: Use cases
+    
+    enum Something
     {
+        struct Request
+        {
+        }
+        struct Response
+        {
+        }
+        struct ViewModel
+        {
+        }
     }
-    struct Response
-    {
+    enum MediaObject {
+        struct Request {
+            var media: MediaResponseModel
+        }
+        struct Response {
+        }
+        struct ViewModel {
+        }
     }
-    struct ViewModel
-    {
-    }
-  }
 }
