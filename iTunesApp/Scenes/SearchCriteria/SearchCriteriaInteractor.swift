@@ -18,14 +18,12 @@ protocol SearchCriteriaBusinessLogic {
 }
 
 protocol SearchCriteriaDataStore {
-    var mediaTypes: [String] { get set } //TODO: Remove if the passing from MediaTypeSelector doesn't work
-    
-    var mediaObjects: [[MediaResponseModel]] { get }
+    var mediaTypes: [String] { get set }
+    var mediaObjects: [[MediaResponseModel]] { get set }
 }
 
-class SearchCriteriaInteractor: SearchCriteriaBusinessLogic, SearchCriteriaDataStore {
+class SearchCriteriaInteractor: SearchCriteriaBusinessLogic, SearchCriteriaDataStore, SearchMediaNetworkInjected {
     var mediaTypes: [String] = []
-    
     var mediaObjects: [[MediaResponseModel]] = []
     var presenter: SearchCriteriaPresentationLogic?
     var worker: SearchCriteriaWorker?

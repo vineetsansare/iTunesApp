@@ -78,7 +78,6 @@ class SearchCriteriaViewController: BaseViewController {
 extension SearchCriteriaViewController {
     @IBAction func submitButtonTapped(_ sender: UIButton) {        
         showLoader()
-        //TODO: Need to pass user selected Entities from MediaTypeSelector NOT hardcoded 😞
         interactor?.searchItunes(request: SearchCriteria.Entity.Request(term: searcTermTextField?.text,
                                                                         entities: entities))
     }

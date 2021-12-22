@@ -20,7 +20,7 @@ protocol MediaDetailsDisplayLogic: AnyObject {
 class MediaDetailsViewController: UIViewController {
     var interactor: MediaDetailsBusinessLogic?
     var router: (NSObjectProtocol & MediaDetailsRoutingLogic & MediaDetailsDataPassing)?
-    private var data: MediaResponseModel?
+    var data: MediaResponseModel?
     
     @IBOutlet private (set) weak var mediaTitleLabel: UILabel?
     @IBOutlet private (set) weak var trackTitleLabel: UILabel?
