@@ -15,7 +15,7 @@ You can also play a video, book, podcast, song.
 - [x] Designed Search Results screen
 - [x] Designed Media Details screen
 - [x] Followed VIP architecture
-- [ ] Unit tests using Quick, Nimble (Work In Progress)
+- [x] Unit tests using Quick, Nimble (Work In Progress)
 - [x] Clear README.md that explains how the code and the test can be run
 
 ## Running the app
@@ -62,10 +62,38 @@ Please note that I've puashed the pods as well. So you don't need to run **pod i
 ![Simulator Screen Shot - iPhone 11 Pro Max - 2021-12-19 at 12 47 39](https://user-images.githubusercontent.com/6418402/146669059-41629fb2-873d-42de-bb8b-968349ecfd6e.png)
 
 
-### Known issues
+### Known issues [FIXED]
 
 - [x] ~~Unable to pop from MediatTypeSelector (Child) screen to SearchCriteria (Parent) screen. - I've followed the original clean-swift blog website and his sample app to navigate from Child to Parent but for some reason I am getting presentingViewController in routeToSearchCriteria()  method of MediaTypeSelectorRouter as nil. thus its not poping. Therefore I have to send the entities in the iTunesSearch API hardcoded.~~
-- [ ] UTs are not covered as I was completing the app's functionality and was stuck at some point and needed time to figure it out. This is because it's the first time I'm having hands on experience on the VIP architecture. Once I use it on day to day basis then I can assure you the pace will increase.
+
+- [x] ~~UTs are not covered as I was completing the app's functionality and was stuck at some point and needed time to figure it out. This is because it's the first time I'm having hands on experience on the VIP architecture. Once I use it on day to day basis then I can assure you the pace will increase.~~
 
 ### Updates
 - [x] Fixed the issue of navigating from MediaTypeSelector (Child) to SearchCriteria (Parent) screen.
+- [x] Updated the UTs (Raised in separate PR)
+- [x] Code coverage is about 42% (I can work on compeleting the remaining as well. But I believe this much is enough to demo my understanding on writing the UTs :)
+
+**MediaTypeSelector scene**
+<img width="1081" alt="Screen Shot 2021-12-23 at 1 27 18 AM" src="https://user-images.githubusercontent.com/6418402/147161303-9369fa2e-a7da-44a3-9feb-f962c6b5f996.png">
+<img width="1086" alt="Screen Shot 2021-12-23 at 1 28 06 AM" src="https://user-images.githubusercontent.com/6418402/147161304-50b52581-7b14-4a29-bb40-84d2feb7b5e6.png">
+<img width="1081" alt="Screen Shot 2021-12-23 at 1 28 49 AM" src="https://user-images.githubusercontent.com/6418402/147161306-e0f08c12-1652-4a6c-86a7-3fa81d4bb99e.png">
+
+
+**SearchCriteria scene**
+<img width="1077" alt="Screen Shot 2021-12-23 at 1 29 20 AM" src="https://user-images.githubusercontent.com/6418402/147161307-e24d1651-c11f-4f8a-a65e-53004d070efb.png">
+<img width="1085" alt="Screen Shot 2021-12-23 at 1 29 37 AM" src="https://user-images.githubusercontent.com/6418402/147161309-74b8e31c-7daa-4be7-a8ad-180314a19bc5.png">
+<img width="1086" alt="Screen Shot 2021-12-23 at 1 29 47 AM" src="https://user-images.githubusercontent.com/6418402/147161311-a32b4b33-d148-449b-9d2d-8d91fd6fc684.png">
+
+**SearchResults scene**
+<img width="1080" alt="Screen Shot 2021-12-23 at 1 30 04 AM" src="https://user-images.githubusercontent.com/6418402/147161313-4881c767-8c7f-48cb-8e07-690962649614.png">
+<img width="1078" alt="Screen Shot 2021-12-23 at 1 30 21 AM" src="https://user-images.githubusercontent.com/6418402/147161315-5f7bffc2-9f91-44e7-8f17-5508113f4c5e.png">
+<img width="1079" alt="Screen Shot 2021-12-23 at 1 30 37 AM" src="https://user-images.githubusercontent.com/6418402/147161318-4a57b1fd-4b05-42de-b2fb-475a998aaa59.png">
+
+**MediaDetails scene**
+<img width="1030" alt="Screen Shot 2021-12-23 at 2 13 20 AM" src="https://user-images.githubusercontent.com/6418402/147161320-bbeb6315-9674-485b-a892-8eb5cb048780.png">
+<img width="1038" alt="Screen Shot 2021-12-23 at 2 13 31 AM" src="https://user-images.githubusercontent.com/6418402/147161321-6b32bbc8-9386-4f5c-8045-fca03bc9fec1.png">
+<img width="1041" alt="Screen Shot 2021-12-23 at 2 13 41 AM" src="https://user-images.githubusercontent.com/6418402/147161322-f619848a-fc62-43de-ade3-bb560a3a6d1e.png">
+
+<img width="354" alt="Screen Shot 2021-12-23 at 2 14 05 AM" src="https://user-images.githubusercontent.com/6418402/147161323-3359c3e8-ea63-4cd6-9d13-1eab2e07f6fc.png">
+
+
